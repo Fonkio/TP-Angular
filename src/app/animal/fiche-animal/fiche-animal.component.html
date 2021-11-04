@@ -1,0 +1,46 @@
+  <div class="card"  style="max-width: 30rem;min-width: 20rem;">
+    <img src="assets/{{ animal.species }}.jpg" class="card-img-top"  alt="...">
+    <div class="card-body">
+      <h1 class="card-title"><b>{{ animal.name }}</b></h1>
+      <table class="table">
+
+        <tbody>
+        <tr>
+          <th scope="row">Id</th>
+          <td >{{ animal.id }}</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Espèce</th>
+          <td >{{ animal.species }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Vétérinaire</th>
+          <td >{{ animal.veterinarian }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Commentaire</th>
+          <td >{{ animal.comment }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td >
+            <a [appLinkMail]="animal.email">
+              {{ animal.email }}
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="col">Numéro de Tel.</th>
+          <td >{{ animal.phoneNumber | phoneNumber: "-" }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="btn-toolbar">
+        <a [routerLink]="['']" class="btn btn-secondary btn-lg btn-block">Retour</a>
+        <button type="button" (click)="ondelete()" class="btn btn-danger btn-lg btn-block">Supprimer</button>
+      </div>
+
+    </div>
+  </div>
+

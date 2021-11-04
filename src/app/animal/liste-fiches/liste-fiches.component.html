@@ -1,0 +1,14 @@
+<div class="card-columns" *ngIf="!isLoading; else loading">
+  <div *ngFor="let animal of animaux">
+    <app-item-animal (onDelete)="onDelete($event)" [animal]=animal></app-item-animal>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div id="img-div">
+    <h3>Loading</h3>
+    <img  src="./assets/loading.gif" id="img"/>
+  </div>
+
+</ng-template>
+
