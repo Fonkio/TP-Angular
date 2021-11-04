@@ -1,10 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FicheAnimalService} from "../../shared/api/fiche-animal.service";
 import {ActivatedRoute, ParamMap} from "@angular/router";
-import {toNumbers} from "@angular/compiler-cli/src/diagnostics/typescript_version";
 
 export interface Animal {
-  id : number;
+  id? : number;
   name : string;
   species : string;
   veterinarian : string;
@@ -23,6 +22,7 @@ export class FicheAnimalComponent implements OnInit {
   id: number = 0
 
   animal!: Animal
+
 
 
   constructor(private animalService: FicheAnimalService, private activatedRoute: ActivatedRoute) {

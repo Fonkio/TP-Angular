@@ -3,6 +3,6 @@
   <div class="card-body">
     <h1 class="card-title">{{animal.name}}</h1>
     <p class="card-text">{{animal.comment}}</p>
-    <a [routerLink]="[animal.id]" class="btn btn-primary">Consulter</a>    <button type="button" (click)="ondelete($event)" class="btn btn-danger">Supprimer</button>
+    <a [routerLink]="[animal.id]" class="btn btn-primary">Consulter</a>  <a [routerLink]="['edit', animal.id]" class="btn btn-primary">Modifier</a>  <button type="button" (click)="ondelete($event)" class="btn btn-danger">Supprimer</button>
   </div>
 </div>

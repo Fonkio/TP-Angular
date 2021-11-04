@@ -6,6 +6,8 @@ import {SharedModule} from "../shared/shared.module";
 import {RouterModule} from "@angular/router";
 import { ItemAnimalComponent } from './item-animal/item-animal.component';
 import {AnimalRoutingModule} from "./animal-routing.module";
+import { FicheAnimalFormComponent } from './fiche-animal-form/fiche-animal-form.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -13,17 +15,19 @@ import {AnimalRoutingModule} from "./animal-routing.module";
   declarations: [
     FicheAnimalComponent,
     ListeFichesComponent,
-    ItemAnimalComponent
+    ItemAnimalComponent,
+    FicheAnimalFormComponent
   ],
   exports: [
     FicheAnimalComponent,
     ListeFichesComponent
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule,
-    AnimalRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        RouterModule,
+        AnimalRoutingModule,
+        FormsModule
+    ]
 })
 export class AnimalModule { }
