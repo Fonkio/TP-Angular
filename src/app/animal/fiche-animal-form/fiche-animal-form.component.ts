@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Animal} from "../fiche-animal/fiche-animal.component";
+
 import {FicheAnimalService} from "../../shared/api/fiche-animal.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Animal} from "../../shared/model/Animal";
 
 @Component({
   selector: 'app-fiche-animal-form',

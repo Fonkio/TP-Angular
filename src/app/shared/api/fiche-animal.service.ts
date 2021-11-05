@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Animal} from "../../animal/fiche-animal/fiche-animal.component";
 import {HttpClient} from "@angular/common/http";
 import {Observable, of} from "rxjs";
+import {Animal} from "../model/Animal";
 
 @Injectable()
 export class FicheAnimalService {

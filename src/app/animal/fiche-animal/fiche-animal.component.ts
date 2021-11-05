@@ -1,16 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FicheAnimalService} from "../../shared/api/fiche-animal.service";
 import {ActivatedRoute, ParamMap} from "@angular/router";
-
-export interface Animal {
-  id? : number;
-  name : string;
-  species : string;
-  veterinarian : string;
-  comment : string;
-  email : string;
-  phoneNumber : string;
-}
+import {Animal} from "../../shared/model/Animal";
 
 @Component({
   selector: 'app-fiche-animal',

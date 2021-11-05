@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListeFichesComponent } from './liste-fiches.component';
+import {FicheAnimalService} from "../../shared/api/fiche-animal.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('ListeFichesComponent', () => {
   let component: ListeFichesComponent;
@@ -8,7 +10,9 @@ describe('ListeFichesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListeFichesComponent ]
+      declarations: [ ListeFichesComponent ],
+      imports: [HttpClientTestingModule],
+      providers: [FicheAnimalService]
     })
     .compileComponents();
   });

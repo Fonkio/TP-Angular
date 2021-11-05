@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FicheAnimalService} from "../../shared/api/fiche-animal.service";
-import {Animal} from "../fiche-animal/fiche-animal.component";
+import {Animal} from "../../shared/model/Animal";
 
 @Component({
   selector: 'app-liste-fiches',

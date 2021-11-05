@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PhoneNumberPipe implements PipeTransform {
 
   transform(value: string, separateur: string = " "): string {
-    return value.split(".").join(separateur);
+    return value?.split(".")?.join(separateur);
   }
 
 }

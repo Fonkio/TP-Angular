@@ -1,8 +1,8 @@
 <div class="card"  style="max-width: 30rem;">
-  <img src="assets/{{ animal.species }}.jpg" class="card-img-top"  alt="...">
+  <img src="assets/{{ animal?.species }}.jpg" class="card-img-top"  alt="...">
   <div class="card-body">
-    <h1 class="card-title">{{animal.name}}</h1>
-    <p class="card-text">{{animal.comment}}</p>
-    <a [routerLink]="[animal.id]" class="btn btn-primary">Consulter</a>  <a [routerLink]="['edit', animal.id]" class="btn btn-primary">Modifier</a>  <button type="button" (click)="ondelete($event)" class="btn btn-danger">Supprimer</button>
+    <h1 class="card-title">{{animal?.name}}</h1>
+    <p class="card-text">{{animal?.comment}}</p>
+    <a [routerLink]="[animal?.id]" class="btn btn-primary">Consulter</a>  <a [routerLink]="['edit', animal?.id]" class="btn btn-primary">Modifier</a>  <button type="button" (click)="ondelete($event)" class="btn btn-danger">Supprimer</button>
   </div>
 </div>

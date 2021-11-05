@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ItemAnimalComponent } from './item-animal.component';
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('ItemAnimalComponent', () => {
   let component: ItemAnimalComponent;
@@ -8,7 +9,7 @@ describe('ItemAnimalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ItemAnimalComponent ]
+      declarations: [ ItemAnimalComponent ],
     })
     .compileComponents();
   });

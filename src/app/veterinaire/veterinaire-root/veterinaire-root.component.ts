@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './veterinaire-root.component.html',
   styleUrls: ['./veterinaire-root.component.scss']
 })
+
 export class VeterinaireRootComponent implements OnInit {
 
   constructor() { }
